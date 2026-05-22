@@ -14,3 +14,7 @@
 > Cinemachine was moelijk maar werkt nu goed 
 
 ![Img3](/ReadmeVfx/Screenshot%20from%202026-05-13%2012-56-35.png)
+
+# Character met animaties
+
+![gif](/ReadmeVfx/3d.gif)
