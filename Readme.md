@@ -18,3 +18,7 @@
 # Character met animaties
 
 ![gif](/ReadmeVfx/3d.gif)
+
+# Char Controller met slopes 
+
+![gif](/ReadmeVfx/walk.gif)
