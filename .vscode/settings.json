@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "M4_GDV_3d_Gym.slnx"
+    "dotnet.defaultSolution": "M4_GDV_3D_Gym.slnx"
 }
