@@ -22,3 +22,7 @@
 # Char Controller met slopes 
 
 ![gif](/ReadmeVfx/walk.gif)
+
+# Cinemachine Cameras Switch
+
+![Gif](/ReadmeVfx/gifcameras.gif)

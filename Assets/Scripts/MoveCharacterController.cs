@@ -16,6 +16,9 @@ public class MoveCharacterController : MonoBehaviour
     private InputAction sprintAction;
     private InputAction jumpAction;
 
+    private InputAction emote1;
+    private InputAction emote2;
+
     private CharacterController characterController;
     private Animator animator;
     private float verticalVelocity;
@@ -30,6 +33,8 @@ public class MoveCharacterController : MonoBehaviour
         moveAction          = map.FindAction("Move");
         sprintAction        = map.FindAction("Sprint");
         jumpAction          = map.FindAction("Jump");
+        emote1 = map.FindAction("Emote1");
+        emote2 = map.FindAction("Emote2");
     }
 
     void OnEnable()  { map.Enable(); }
@@ -41,7 +46,7 @@ public class MoveCharacterController : MonoBehaviour
 
         float speed = movementInput.y * moveSpeed;
         if (sprintAction.IsPressed())
-            speed *= 2;
+            speed *= sprintMultiplier;
 
         Vector3 move = transform.forward * speed * Time.deltaTime;
 
@@ -67,7 +72,16 @@ public class MoveCharacterController : MonoBehaviour
 
         characterController.Move(move);
 
-        animator.SetFloat("Speed", movementInput.y);
+        animator.SetFloat("Speed", speed);
         animator.SetBool("Grounded", characterController.isGrounded);
+
+        if(emote1.WasPressedThisFrame())
+        {
+            animator.SetTrigger("emote1trigger");
+        }
+        if(emote2.WasPressedThisFrame())
+        {
+            animator.SetTrigger("emote2trigger");
+        }
     }
 }
